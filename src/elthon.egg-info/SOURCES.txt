@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/elthon/Elthon.py
+src/elthon/__init__.py
+src/elthon.egg-info/PKG-INFO
+src/elthon.egg-info/SOURCES.txt
+src/elthon.egg-info/dependency_links.txt
+src/elthon.egg-info/top_level.txt
