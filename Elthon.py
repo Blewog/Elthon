@@ -8,4 +8,6 @@ class write:
       print(text)
   def undrline(text, option):
     if(option != "return"):
-      print('{:s}'.format('\u0333').join(text), end=option)
+      print('{:s}'.format('\u0332'.join(text), end=option))
+    else:
+      print('{:s}'.format('\u0332'.join(text)))
