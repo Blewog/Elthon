@@ -1,3 +1,3 @@
 from Elthon import *
 
-message.err("iodhwqnodnw")
+write.console("hello", color="red")
