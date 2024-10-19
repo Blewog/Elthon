@@ -72,8 +72,3 @@ class message:
     print(f"{border_char}{' ' * (box_width - 2)}{border_char}")
     print(f"{border_char} {text}{' ' * (box_width - len(text) - 3)}{border_char}")
     print(border_char * box_width)
-    print(border_char * box_width)
-    print(f"{border_char} \033[1m[ERROR]\033[0m{' ' * (box_width - 10)}{border_char}")
-    print(f"{border_char}{' ' * (box_width - 2)}{border_char}")
-    print(f"{border_char} {text}{' ' * (box_width - len(text) - 3)}{border_char}")
-    print(border_char * box_width)
