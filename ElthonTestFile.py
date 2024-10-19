@@ -7,29 +7,46 @@ green = "\033[92m"
 yellow = "\033[93m"
 red = "\033[91m"
 end = "\033[0m"
+
 border_char = "*"
 
 # Basically print but with options
 class write:
   def console(text, **kwargs):
-    for label, item in kwargs.items():
-      if(label == "color"):
-        if(item == "purple"):
-          print(f"{purple}{text}{end}")
-        if(item == "cyan"):
-          print(f"{cyan}{text}{end}")
-        if(item == "darkcyan"):
-          print(f"{darkcyan}{text}{end}")
-        if(item == "blue"):
-            print(f"{blue}{text}{end}")
-        if(item == "green"):
-          print(f"{green}{text}{end}")
-        if(item == "yellow"):
-          print(f"{yellow}{text}{end}")
-        if(item == "red"):
-          print(f"{red}{text}{end}")
+    color = kwargs.get("color")
+    ending = kwargs.get("end")
+    color_code = globals().get(color, "")
 
-# Displays a message box in the terminal
+    if(color): 
+      if(ending):
+        print(f"{color_code}{text}{end}", end=ending)
+      else:
+        print(f"{color_code}{text}{end}")
+    if(not color and not ending):
+      print(text)
+  def undrline(text, **kwargs):
+    color = kwargs.get("color")
+    ending = kwargs.get("end")
+    color_code = globals().get(color, "")
+
+    if(color):
+      if(ending):
+        print(color_code + '{:s}'.format('\u0332'.join(text)) + end, end=ending)
+      else:
+        print(color_code + '{:s}'.format('\u0332'.join(text)) + end)
+  def bold(text, **kwargs):
+    color = kwargs.get("color")
+    ending = kwargs.get("end")
+    color_code = globals().get(color, "")
+
+    if(color):
+      if(ending):
+        print(f"{color_code}\033[1m{text}\033[0m{end}", end=ending)
+      else:
+        print(f"{color_code}\033[1m{text}\033[0m{end}")
+    if(not color and not ending):
+      print("\033[1m" + text + "\033[0m")
+
 class message:
   def info(text):
     box_width = len(text) + 8
