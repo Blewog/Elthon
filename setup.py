@@ -1,10 +1,8 @@
 from setuptools import setup
 
-from .Elthon import __version__
-
 setup(
     name='Elthon',
-    version=__version__,
+    version='0.0.1',
 
     url='https://github.com/Blewog/Elthon',
     author='Blewog',
