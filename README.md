@@ -1,3 +1,6 @@
+# INSTALLATION
+The installation i quite simple and the reason i chose this way is because i was looking for a solution that works with github codepaces. ```hi
+
 # DOCUMENTATION (Please keep in mind this is a work in progress)
 ## The write function
 ### write.console()
