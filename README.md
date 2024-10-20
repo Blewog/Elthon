@@ -1,5 +1,10 @@
 # INSTALLATION
-The installation i quite simple and the reason i chose this way is because i was looking for a solution that works with github codepaces. ```hi
+The installation i quite simple and the reason i chose this way is because i was looking for a solution that works with github codepaces. 
+```
+git clone https://github.com/Blewog/Elthon
+cd Elthon
+pip install -e .
+```
 
 # DOCUMENTATION (Please keep in mind this is a work in progress)
 ## The write function
