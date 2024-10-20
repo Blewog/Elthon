@@ -10,7 +10,7 @@ setup(
     url='https://github.com/Blewog/Elthon',
     author='Blewog',
     author_email='no',
-    license='MPL-2.0'
+    license='MPL-2.0',
 
     py_modules=['Elthon'],
 )
