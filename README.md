@@ -6,6 +6,15 @@ git clone https://github.com/Blewog/Elthon
 cd Elthon
 pip install -e .
 ```
+Or if you want to install a certain version here are the commands to do so, (ill be using the first version as an example)
+```
+curl -L https://github.com/Blewog/Elthon/archive/refs/tags/v0.0.1-Alpha.zip --output Elthon.zip
+unzip Elthon.zip
+cd Elthon-0.0.1-Alpha
+pip install -e .
+mv Elthon-0.0.1-Alpha Elthon_0_0_1_Alpha
+```
+the mv command is to rename it because it cant import ones with "-" and "." and stuff.
 
 # DOCUMENTATION (Please keep in mind this is a work in progress so theres like no features)
 ## The write function
