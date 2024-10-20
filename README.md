@@ -15,6 +15,15 @@ pip install -e .
 mv Elthon-0.0.1-Alpha Elthon_0_0_1_Alpha
 ```
 the mv command is to rename it because it cant import ones with "-" and "." and stuff.
+for it to work you must change it from
+```
+import Elthon
+```
+to
+```
+import Elthon_0_0_1_Alpha
+```
+or whatever the folder is named.
 
 # DOCUMENTATION (Please keep in mind this is a work in progress so theres like no features)
 ## The write function
