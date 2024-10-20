@@ -1,9 +1,17 @@
 # INSTALLATION
+### (These installation processes were tested in github codespaces (also only for bash cause thats what VSCode uses (so basically if you have windows and dont have VSCode figure it out)))
 The installation is quite simple and the reason i chose this way is because i was looking for a solution that works with github codepaces and this one does. (also i probably messed up somewhere in the packaging)
 ```
 git clone https://github.com/Blewog/Elthon
 cd Elthon
-pip install -e .
+pip install .
+```
+Or if you want to install a certain version here are the commands to do so, (ill be using the first version as an example)
+```
+curl -L https://github.com/Blewog/Elthon/archive/refs/tags/v0.0.1-Alpha.zip --output Elthon.zip
+unzip Elthon.zip
+cd Elthon-0.0.1-Alpha
+pip install .
 ```
 
 # DOCUMENTATION (Please keep in mind this is a work in progress so theres like no features)
