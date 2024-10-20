@@ -1,5 +1,5 @@
 # INSTALLATION
-The installation i quite simple and the reason i chose this way is because i was looking for a solution that works with github codepaces. 
+The installation is quite simple and the reason i chose this way is because i was looking for a solution that works with github codepaces and this one does. 
 ```
 git clone https://github.com/Blewog/Elthon
 cd Elthon
