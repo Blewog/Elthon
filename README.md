@@ -6,7 +6,7 @@ cd Elthon
 pip install -e .
 ```
 
-# DOCUMENTATION (Please keep in mind this is a work in progress)
+# DOCUMENTATION (Please keep in mind this is a work in progress so theres like no features)
 ## The write function
 ### write.console()
 write.console() is essentially just print. example: write.console("Hello World!") which would print "Hello, World!". Heres a breakdown of the function: its just print so the thing in quotations is what will be printed.
