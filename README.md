@@ -4,14 +4,14 @@ The installation is quite simple and the reason i chose this way is because i wa
 ```
 git clone https://github.com/Blewog/Elthon
 cd Elthon
-pip install .
+pip install -e .
 ```
 Or if you want to install a certain version here are the commands to do so, (ill be using the first version as an example)
 ```
 curl -L https://github.com/Blewog/Elthon/archive/refs/tags/v0.0.1-Alpha.zip --output Elthon.zip
 unzip Elthon.zip
 cd Elthon-0.0.1-Alpha
-pip install .
+pip install -e .
 ```
 
 # DOCUMENTATION (Please keep in mind this is a work in progress so theres like no features)
