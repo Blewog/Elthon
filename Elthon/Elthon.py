@@ -8,11 +8,15 @@ yellow = "\033[93m"
 red = "\033[91m"
 end = "\033[0m"
 
+file = "SaveFunctionHistory.txt"
+history = []
+space = " "
 border_char = "*"
 
 # Basically print but with options
 class write:
   def console(text, **kwargs):
+    sHistory = kwargs.get("history")
     color = kwargs.get("color")
     ending = kwargs.get("end")
     color_code = globals().get(color, "")
@@ -22,8 +26,14 @@ class write:
         print(f"{color_code}{text}{end}", end=ending)
       else:
         print(f"{color_code}{text}{end}")
+      if(sHistory):
+        print(f"{color_code}{', '.join(history)}{end}")
     if(not color and not ending):
-      print(text)
+      if(sHistory):
+        pHistory = save.history()
+        print(', '.join(pHistory))
+      else:
+        print(text)
   def undrline(text, **kwargs):
     color = kwargs.get("color")
     ending = kwargs.get("end")
@@ -47,6 +57,7 @@ class write:
     if(not color and not ending):
       print("\033[1m" + text + "\033[0m")
 
+# Prints a message box
 class message:
   def info(text):
     box_width = len(text) + 8
@@ -72,3 +83,26 @@ class message:
     print(f"{border_char}{' ' * (box_width - 2)}{border_char}")
     print(f"{border_char} {text}{' ' * (box_width - len(text) - 3)}{border_char}")
     print(border_char * box_width)
+
+# Essentially a clipboard
+class save():
+  def text(text, **SaveOptions):
+    global file
+    custom_file = SaveOptions.get("file")
+    filename = custom_file if custom_file else file
+    color = SaveOptions.get("color")
+    color_code = globals().get(color, "")
+    
+    with open(filename, "a") as f:
+      if(color):
+        f.write(f"{color_code}{text}{end}")
+      else:
+        f.write(text)
+  def history(**kwargs):
+    global file
+    custom_file = kwargs.get("file")
+    filename = custom_file if custom_file else file
+
+    with open(filename, "r") as f:
+      history = f.readlines()
+      return history
