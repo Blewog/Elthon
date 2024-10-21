@@ -28,7 +28,7 @@ or whatever the folder is named.
 # DOCUMENTATION (W.I.P. (Both this and the library))
 ## The write function
 ### write.console()
-write.console() is essentially just print. example: write.console("Hello World!") which would print "Hello, World!". Heres a breakdown of the function: its just print so the thing in quotations is what will be printed./
+write.console() is essentially just print. example: write.console("Hello World!") which would print "Hello, World!". Heres a breakdown of the function: its just print so the thing in quotations is what will be printed.\
 Heres a basic example and its output.
 ```
 write.console("Hello, World")
