@@ -13,6 +13,7 @@ unzip Elthon.zip
 cd Elthon-0.0.1-Alpha
 pip install -e .
 ```
+then once you get back to your project path type:
 ```
 mv Elthon-0.0.1-Alpha Elthon_0_0_1_Alpha
 ```
