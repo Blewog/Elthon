@@ -1,5 +1,6 @@
 # Any needed modules
 import sys
+import os
 
 # Global variables
 purple = "\033[95m"
@@ -11,10 +12,12 @@ yellow = "\033[93m"
 red = "\033[91m"
 end = "\033[0m"
 
-file = "SaveFunctionHistory.txt"
+file = "/workspaces/ElthonFeatureTesting/Elthon/SaveFunctionHistory.txt"
 history = []
 space = " "
 border_char = "*"
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Basically print but with options
 class write:
@@ -107,32 +110,56 @@ class save():
     global file
     custom_file = SaveOptions.get("file")
     filename = custom_file if custom_file else file
+    if(os.path.isabs(filename)):
+      file_path = filename
+    else:
+      file_path = os.path.join(os.path.dirname(current_dir), filename)
     color = SaveOptions.get("color")
     color_code = globals().get(color, "")
     
-    with open(filename, "a") as f:
-      if(color):
-        f.write(f"{color_code}{text}{end}\n")
-      else:
-        f.write(f"{text}\n")
+    try:
+      with open(file_path, "a") as f:
+        if(color):
+          f.write(f"{color_code}{text}{end}\n")
+        else:
+          f.write(f"{text}\n")
+    except FileNotFoundError:
+      message.err(f"File '{filename}' not found.")
+      return None
 
   def history(**kwargs):
     global file
     custom_file = kwargs.get("file")
     filename = custom_file if custom_file else file
+    if(os.path.isabs(filename)):
+      file_path = filename
+    else:
+      file_path = os.path.join(os.path.dirname(current_dir), filename)
 
-    with open(filename, "r") as f:
-      history = [line.strip() for line in f]
-      return history
+    try:
+      with open(file_path, "r") as f:
+        content = f.read()
+        return content
+    except FileNotFoundError:
+      message.err(f"File '{filename}' not found.")
+      return None
   
   def clear(**kwargs):
-    global file
     custom_file = kwargs.get("file")
     filename = custom_file if custom_file else file
+    if(os.path.isabs(filename)):
+      file_path = filename
+    else:
+      file_path = os.path.join(os.path.dirname(current_dir), filename)
 
-    with open(filename, "w") as f:
-      f.write("")
+    try:
+      with open(file_path, "w") as f:
+        f.write("")
+    except FileNotFoundError:
+      message.err(f"File '{filename}' not found.")
+      return None
 
+# Takes input and returns it
 def input(text, **kwargs):
   color = kwargs.get("color")
   color_code = globals.get(color, "")
@@ -145,3 +172,36 @@ def input(text, **kwargs):
     write.console(text, end="")
     input = sys.stdin.readline().strip()
     return input
+
+# used for messing with files
+class files():
+  def read(**kwargs):
+    custom_file = kwargs.get("file")
+    filename = custom_file if custom_file else file
+    if(os.path.isabs(filename)):
+      file_path = filename
+    else:
+      file_path = os.path.join(os.path.dirname(current_dir), filename)
+
+    try:
+      with open(file_path, "r") as f:
+        content = f.read()
+        return content
+    except FileNotFoundError:
+      message.err(f"File '{filename}' not found.")
+      return None
+    
+  def clear(**kwargs):
+    custom_file = kwargs.get("file")
+    filename = custom_file if custom_file else file
+    if(os.path.isabs(filename)):
+      file_path = filename
+    else:
+      file_path = os.path.join(os.path.dirname(current_dir), filename)
+
+    try:
+      with open(file_path, "w") as f:
+        f.write("")
+    except FileNotFoundError:
+        message.err(f"File '{filename}' not found.")
+        return None
