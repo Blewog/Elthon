@@ -101,7 +101,7 @@ Output: N/A
 
 ## The save function
 # save.text()
-save.text() saves text to the SaveFunctionHistory.txt file sort of like a clipboard.\
+save.text() saves text to the SaveFunctionHistory.txt file (or whatever file you put in the paranthesis) sort of like a clipboard.\
 Heres a basic example:
 ```
 from Elthon import save
@@ -121,7 +121,7 @@ history = save.history()
 Output N/A (it put the history into the history variable)
 
 # save.clear()
-save.clear() clears the text in SaveFunctionHistory.txt.\
+save.clear() clears the text in SaveFunctionHistory.txt (or whatever file you put in the paranthesis.)\
 Heres a basic example:
 ```
 from Elthon import save
