@@ -100,7 +100,7 @@ message.err("Hello, World!")
 Output: N/A
 
 ## The save function
-# save.text()
+### save.text()
 save.text() saves text to the SaveFunctionHistory.txt file (or whatever file you put in the paranthesis) sort of like a clipboard.\
 Heres a basic example:
 ```
@@ -110,7 +110,7 @@ save.text("Hello, World")
 ```
 Output: N/A (No output it just saves.)
 
-# save.history()
+### save.history()
 save.history() returns the history of the txt file.\
 Heres a basic example:
 ```
@@ -120,7 +120,7 @@ history = save.history()
 ```
 Output N/A (it put the history into the history variable)
 
-# save.clear()
+### save.clear()
 save.clear() clears the text in SaveFunctionHistory.txt (or whatever file you put in the paranthesis.)\
 Heres a basic example:
 ```
