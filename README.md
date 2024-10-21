@@ -28,7 +28,7 @@ or whatever the folder is named.
 # DOCUMENTATION (W.I.P. (Both this and the library))
 ## The write function
 ### write.console()
-write.console() is essentially just print. example: write.console("Hello World!") which would print "Hello, World!". Heres a breakdown of the function: its just print so the thing in quotations is what will be printed.
+write.console() is essentially just print. example: write.console("Hello World!") which would print "Hello, World!". Heres a breakdown of the function: its just print so the thing in quotations is what will be printed./
 Heres a basic example and its output.
 ```
 write.console("Hello, World")
@@ -36,7 +36,7 @@ write.console("Hello, World")
 Output: Hello, World!
 
 ### write.undrline()
-write.undrline() is near the same as write.console(), ill show you an example: write.undrline("Hello, World!") which would print "<ins>Hello, World!</ins>" thats all you need to know since its near the same as write.console() but it underlines.
+write.undrline() is near the same as write.console(), ill show you an example: write.undrline("Hello, World!") which would print "<ins>Hello, World!</ins>" thats all you need to know since its near the same as write.console() but it underlines./
 Heres a basic example and its output
 ```
 console.undrline("Hello, World!")
@@ -44,7 +44,7 @@ console.undrline("Hello, World!")
 Output: <ins>Hello, World!</ins>
 
 ### write.bold()
-write.bold() is also near the same as write.console(), heres an example: write.bold("Hello, World!") which would print "__Hello, World!__" just the same as the others but it bolds.  return
+write.bold() is also near the same as write.console(), heres an example: write.bold("Hello, World!") which would print "__Hello, World!__" just the same as the others but it bolds./
 Heres a basic example and its output:
 ```
 console.bold("Hello, World")
