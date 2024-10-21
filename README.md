@@ -12,6 +12,8 @@ curl -L https://github.com/Blewog/Elthon/archive/refs/tags/v0.0.1-Alpha.zip --ou
 unzip Elthon.zip
 cd Elthon-0.0.1-Alpha
 pip install -e .
+```
+```
 mv Elthon-0.0.1-Alpha Elthon_0_0_1_Alpha
 ```
 the mv command is to rename it because it cant import ones with "-" and "." and stuff.
