@@ -25,7 +25,7 @@ import Elthon_0_0_1_Alpha
 ```
 or whatever the folder is named.
 
-# DOCUMENTATION (Please keep in mind this is a work in progress so theres like no features)
+# DOCUMENTATION (W.I.P. (Both this and the library))
 ## The write function
 ### write.console()
 write.console() is essentially just print. example: write.console("Hello World!") which would print "Hello, World!". Heres a breakdown of the function: its just print so the thing in quotations is what will be printed.
@@ -44,7 +44,7 @@ console.undrline("Hello, World!")
 Output: <ins>Hello, World!</ins>
 
 ### write.bold()
-write.bold() is also near the same as write.console(), heres an example: write.bold("Hello, World!") which would print "__Hello, World!__" just the same as the others but it bolds.
+write.bold() is also near the same as write.console(), heres an example: write.bold("Hello, World!") which would print "__Hello, World!__" just the same as the others but it bolds.  return
 Heres a basic example and its output:
 ```
 console.bold("Hello, World")
@@ -57,6 +57,7 @@ This explanation wont be too long. there are currently two things you can change
 ## The message function
 ### message.info()
 message.info() prints an info message box. Example: message.info("Hello, World!") (i cant show what it would print because it doesnt really let me)
+H
 
 ### message.warn()
 message.warn() prints a warning message box. Example: message.info("Hello, World!")
