@@ -95,14 +95,23 @@ class save():
     
     with open(filename, "a") as f:
       if(color):
-        f.write(f"{color_code}{text}{end}")
+        f.write(f"{color_code}{text}{end}\n")
       else:
-        f.write(text)
+        f.write(f"{text}\n")
+
   def history(**kwargs):
     global file
     custom_file = kwargs.get("file")
     filename = custom_file if custom_file else file
 
     with open(filename, "r") as f:
-      history = f.readlines()
+      history = [line.strip() for line in f]
       return history
+  
+  def clear(**kwargs):
+    global file
+    custom_file = kwargs.get("file")
+    filename = custom_file if custom_file else file
+
+    with open(filename, "w") as f:
+      f.write("")
