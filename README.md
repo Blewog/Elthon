@@ -36,7 +36,7 @@ write.console("Hello, World")
 Output: Hello, World!
 
 ### write.undrline()
-write.undrline() is near the same as write.console(), ill show you an example: write.undrline("Hello, World!") which would print "<ins>Hello, World!</ins>" thats all you need to know since its near the same as write.console() but it underlines./
+write.undrline() is near the same as write.console(), ill show you an example: write.undrline("Hello, World!") which would print "<ins>Hello, World!</ins>" thats all you need to know since its near the same as write.console() but it underlines.\
 Heres a basic example and its output
 ```
 console.undrline("Hello, World!")
@@ -44,7 +44,7 @@ console.undrline("Hello, World!")
 Output: <ins>Hello, World!</ins>
 
 ### write.bold()
-write.bold() is also near the same as write.console(), heres an example: write.bold("Hello, World!") which would print "__Hello, World!__" just the same as the others but it bolds./
+write.bold() is also near the same as write.console(), heres an example: write.bold("Hello, World!") which would print "__Hello, World!__" just the same as the others but it bolds.\
 Heres a basic example and its output:
 ```
 console.bold("Hello, World")
@@ -56,8 +56,18 @@ This explanation wont be too long. there are currently two things you can change
 
 ## The message function
 ### message.info()
-message.info() prints an info message box. Example: message.info("Hello, World!") (i cant show what it would print because it doesnt really let me)
-H
+message.info() prints an info message box. Example: message.info("Hello, World!") (i cant show what it would prints here because it doesnt really let me)\
+Heres a basic Example
+```
+from Elthon import message
+
+message.info("Hello, World!")
+```
+Output: *********************\
+        * __[INFO]__        *\
+        *                   *\
+        * Hello, World!     *\
+        *********************
 
 ### message.warn()
 message.warn() prints a warning message box. Example: message.info("Hello, World!")
