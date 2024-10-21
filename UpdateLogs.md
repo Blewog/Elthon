@@ -1,4 +1,9 @@
 # UPDATE LOGS
+## v0.0.8 (Alpha)
+### Release: 10-21-24
+-Changed the way files are looked for
+-Added the files function (Still a W.I.P.)
+
 ## v0.0.6 (Alpha)
 ### Release: 10-21-24
 -Fixed problems with write function\
