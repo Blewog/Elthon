@@ -1,7 +1,7 @@
 # UPDATE LOGS
 ## v0.0.6 (Alpha)
 ### Release: 10-21-24
--Fixed problems with write function
+-Fixed problems with write function\
 -Added input function
 
 ## v0.0.4 (Alpha)
