@@ -157,6 +157,16 @@ file.read("/path/to/file/")
 ```
 Output: (It varies based on file)
 
+### files.write()
+files.write() writes to a file.\
+Heres a basic example:
+```
+from Elthon.Elthon import files
+
+files.write("hi", file="/path/to/file/")
+```
+Output: N/A
+
 ### files.clear()
 files.clear() clears the specified file.\
 Heres a basic example:
@@ -164,5 +174,15 @@ Heres a basic example:
 from Elthon.Elthon import files
 
 file.clear("/path/to/file/")
+```
+Output: N/A
+
+### files.create()
+files.create() create a file at the specified path (You cannot currently say what type of file (Also its still in testing)).\
+Heres a basic example:
+```
+from Elthon.Elthon import files
+
+files.create("/path/to/directory/")
 ```
 Output: N/A
