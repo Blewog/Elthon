@@ -1,4 +1,10 @@
 # UPDATE LOGS
+## v0.1.1 (Beta)
+### Release: 10-22-24
+-Added write to the files function\
+-Added create to the files function\
+-Fixed files and save function creating a new file when a file is not found when calling clear
+
 ## v0.0.8 (Alpha)
 ### Release: 10-21-24
 -Changed the way files are looked for\
