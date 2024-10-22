@@ -1,6 +1,6 @@
 # INSTALLATION
 ### (These installation processes were tested in github codespaces (also only for bash cause thats what VSCode uses (so basically if you have windows and dont have VSCode figure it out)))
-The installation is quite simple and the reason i chose this way is because i was looking for a solution that works with github codepaces and this one does. (also i probably messed up somewhere in the packaging)
+The installation is quite simple and the reason i chose this way is because i was looking for a solution that works with github codepaces and this one does. (also i probably messed up somewhere in the packaging) (make sure its in the same folder as your project)
 ```
 git clone https://github.com/Blewog/Elthon
 cd Elthon
