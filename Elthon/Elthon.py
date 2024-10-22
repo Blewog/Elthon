@@ -114,15 +114,10 @@ class save():
       file_path = filename
     else:
       file_path = os.path.join(os.path.dirname(current_dir), filename)
-    color = SaveOptions.get("color")
-    color_code = globals().get(color, "")
     
     try:
       with open(file_path, "a") as f:
-        if(color):
-          f.write(f"{color_code}{text}{end}\n")
-        else:
-          f.write(f"{text}\n")
+        f.write(f"{text}\n")
     except FileNotFoundError:
       message.err(f"File '{filename}' not found.")
       return None
@@ -152,11 +147,12 @@ class save():
     else:
       file_path = os.path.join(os.path.dirname(current_dir), filename)
 
-    try:
+    if(os.path.isfile(file_path)):
       with open(file_path, "w") as f:
         f.write("")
-    except FileNotFoundError:
-      message.err(f"File '{filename}' not found.")
+        message.info(f"'{file_path}' cleared successfuly.")
+    else:
+      message.err(f"File '{file_path}' not found.")
       return None
 
 # Takes input and returns it
@@ -191,6 +187,21 @@ class files():
       message.err(f"File '{filename}' not found.")
       return None
     
+  def write (text, **kwargs):
+    custom_file = kwargs.get("file")
+    filename = custom_file if custom_file else file
+    if(os.path.isabs(filename)):
+      file_path = filename
+    else:
+      file_path = os.path.join(os.path.dirname(current_dir), filename)
+
+    if(os.path.isfile(file_path)):
+      with open(file_path, "a") as f:
+        f.write(f"{text}\n")
+    else:
+      message.err(f"File '{file_path}' not found.")
+      return None
+
   def clear(**kwargs):
     custom_file = kwargs.get("file")
     filename = custom_file if custom_file else file
@@ -199,9 +210,23 @@ class files():
     else:
       file_path = os.path.join(os.path.dirname(current_dir), filename)
 
-    try:
+    if(os.path.isfile(file_path)):
       with open(file_path, "w") as f:
         f.write("")
-    except FileNotFoundError:
-        message.err(f"File '{filename}' not found.")
-        return None
+        message.info(f"'{file_path}' cleared successfuly.")
+    else:
+      message.err(f"File '{file_path}' not found.")
+      return None
+
+  def create(path):
+    filename = path
+    if(os.path.isabs(filename)):
+      file_path = filename
+    else:
+      file_path = os.path.join(os.path.dirname(current_dir), filename)
+
+    if(not os.path.isfile(file_path)):
+      with open(file_path, "w") as f:
+        message.info(f"'{file_path}' created successfuly.")
+    else:
+      message.warn(f"File '{file_path}' already exists.")
