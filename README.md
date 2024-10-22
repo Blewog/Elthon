@@ -132,3 +132,37 @@ from Elthon.Elthon import save
 save.clear()
 ```
 Output: N/A (it cleared the history)
+
+## The input function
+this function returns what the user entered.
+Heres a basic example ('{userInput}' will be used to show where the input would take place):
+```
+from Elthon.Elthon import input
+
+input("Input something: ")
+```
+Output:\
+Input something: \
+{userInput} (after getting the input it returns it)
+
+
+## The files function (W.I.P.)
+### files.read()
+files.read() reads and prints the content of the selected file.
+Heres a basic example:
+```
+from Elthon.Elthon import files
+
+file.read("/path/to/file/")
+```
+Output: (It varies based on file)
+
+### files.clear()
+files.clear() clears the specified file.
+Heres a basic example:
+```
+from Elthon.Elthon import files
+
+file.clear("/path/to/file/")
+```
+Output: N/A
