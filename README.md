@@ -148,7 +148,7 @@ Input something: \
 
 ## The files function (W.I.P.)
 ### files.read()
-files.read() reads and prints the content of the selected file.
+files.read() reads and prints the content of the selected file.\
 Heres a basic example:
 ```
 from Elthon.Elthon import files
@@ -158,7 +158,7 @@ file.read("/path/to/file/")
 Output: (It varies based on file)
 
 ### files.clear()
-files.clear() clears the specified file.
+files.clear() clears the specified file.\
 Heres a basic example:
 ```
 from Elthon.Elthon import files
