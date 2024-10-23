@@ -1,4 +1,7 @@
 # UPDATE LOGS
+## v0.1.6 (Beta)
+-Fixed an oversight in v0.1.5
+
 ## v0.1.5 (Beta)
 ### Release: 10-23-24
 -Added delete to the files function\
