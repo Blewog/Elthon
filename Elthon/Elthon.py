@@ -215,7 +215,7 @@ class files():
       message.err(f"File '{file_path}' not found.")
       return None
 
-  def create(name, **path):
+  def create(path):
     filename = path
     if(os.path.isabs(filename)):
       file_path = filename
@@ -243,9 +243,3 @@ class files():
         message.err(f"Error deleting '{file_path}': {e}")
     else:
       message.err(f"File '{file_path}' not found.")
-
-    if(not os.path.isfile(file_path)):
-      with open(file_path, "w") as f:
-        message.info(f"'{file_path}' created successfuly.")
-    else:
-      message.warn(f"File '{file_path}' already exists.")
