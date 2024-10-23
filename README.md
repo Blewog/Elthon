@@ -24,7 +24,7 @@ then once you get back to your project path type:
 ```
 mv Elthon-0.0.1-Alpha Elthon_0_0_1_Alpha
 ```
-the mv command is to rename it because it cant import ones with "-" and "." and stuff.
+the mv command is to rename it because it cant import ones with "-" and "." and stuff.\
 for it to work you must change it from
 ```
 import Elthon.Elthon
