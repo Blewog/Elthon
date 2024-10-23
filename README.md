@@ -185,11 +185,21 @@ file.clear("/path/to/file/")
 Output: N/A
 
 ### files.create()
-files.create() create a file at the specified path (You cannot currently say what type of file (Also its still in testing)).\
+files.create() create a file at the specified path (must include the type of file in the name area) (if a file path is not defined it will be created in the Elthon folder).\
 Heres a basic example:
 ```
 from Elthon.Elthon import files
 
-files.create("/path/to/directory/")
+files.create("name", file="/path/to/directory/")
 ```
 Output: N/A
+
+### files.delete()
+files.delete deletes the specified file.\
+Heres a basic example:
+```
+from Elthon.ELthon import files
+
+files.delete("/path/to/file/")
+```
+Ouput: N/A
