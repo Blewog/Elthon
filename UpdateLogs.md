@@ -1,4 +1,11 @@
 # UPDATE LOGS
+## v0.1.5 (Beta)
+### Release: 10-23-24
+-Added delete to the files function\
+-Changed the functions inside of the files function to have to have a path\
+-Changed create inside of the files function so you can specify a name\
+-Fixed SaveFunctionHistory filepath accidentally saved from the test code
+
 ## v0.1.1 (Beta)
 ### Release: 10-22-24
 -Added write to the files function\
