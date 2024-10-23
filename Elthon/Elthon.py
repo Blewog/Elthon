@@ -12,7 +12,7 @@ yellow = "\033[93m"
 red = "\033[91m"
 end = "\033[0m"
 
-file = "/workspaces/ElthonFeatureTesting/Elthon/SaveFunctionHistory.txt"
+file = "SaveFunctionHistory.txt"
 history = []
 space = " "
 border_char = "*"
@@ -171,9 +171,8 @@ def input(text, **kwargs):
 
 # used for messing with files
 class files():
-  def read(**kwargs):
-    custom_file = kwargs.get("file")
-    filename = custom_file if custom_file else file
+  def read(file):
+    filename = file
     if(os.path.isabs(filename)):
       file_path = filename
     else:
@@ -187,9 +186,8 @@ class files():
       message.err(f"File '{filename}' not found.")
       return None
     
-  def write (text, **kwargs):
-    custom_file = kwargs.get("file")
-    filename = custom_file if custom_file else file
+  def write (text, file):
+    filename = file
     if(os.path.isabs(filename)):
       file_path = filename
     else:
@@ -202,9 +200,8 @@ class files():
       message.err(f"File '{file_path}' not found.")
       return None
 
-  def clear(**kwargs):
-    custom_file = kwargs.get("file")
-    filename = custom_file if custom_file else file
+  def clear(file):
+    filename = file
     if(os.path.isabs(filename)):
       file_path = filename
     else:
@@ -218,12 +215,34 @@ class files():
       message.err(f"File '{file_path}' not found.")
       return None
 
-  def create(path):
+  def create(name, **path):
     filename = path
     if(os.path.isabs(filename)):
       file_path = filename
     else:
       file_path = os.path.join(os.path.dirname(current_dir), filename)
+
+    if(not os.path.isfile(file_path)):
+      with open(file_path, "w") as f:
+        message.info(f"'{file_path}' created successfuly.")
+    else:
+      message.warn(f"File '{file_path}' already exists.")
+  
+  def delete(path):
+    filename = path
+    if(os.path.isabs(filename)):
+      file_path = filename
+    else:
+      file_path = os.path.join(os.path.dirname(current_dir), filename)
+
+    if(os.path.isfile(file_path)):
+      try:
+        os.remove(file_path)
+        message.info(f"'{file_path}' deleted successfuly.")
+      except Exception as e:
+        message.err(f"Error deleting '{file_path}': {e}")
+    else:
+      message.err(f"File '{file_path}' not found.")
 
     if(not os.path.isfile(file_path)):
       with open(file_path, "w") as f:
