@@ -18,7 +18,7 @@ Also this installation should work but i dont know so youd have to test it and f
 pip install git+https://github.com/Blewog/Elthon
 ```
 After that you have to find out the rest\
-_________________________________________________________________\
+____________________________________________________________________________________________________________________________\
 \
 then once you get back to your project path type:
 ```
