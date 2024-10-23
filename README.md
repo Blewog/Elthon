@@ -1,6 +1,6 @@
 # INSTALLATION
-### (These installation processes were tested in github codespaces (also only for bash cause thats what VSCode uses (so basically if you have windows and dont have VSCode figure it out)))
-The installation is quite simple and the reason i chose this way is because i was looking for a solution that works with github codepaces and this one does. (also i probably messed up somewhere in the packaging) (make sure its in the same folder as your project)
+### This was testing only in vscode in github codesplaces
+The installation is quite simple, and the normal installation used for other libraries should work but i cant test that since i only use github codespaces vscode.
 ```
 git clone https://github.com/Blewog/Elthon
 cd Elthon
@@ -13,6 +13,12 @@ unzip Elthon.zip
 cd Elthon-0.0.1-Alpha
 pip install -e .
 ```
+Also this installation should work but i dont know so youd have to test it and find out all that yourself.
+```
+pip install git+https://github.com/Blewog/Elthon
+```
+After that you have to find out the rest\
+\
 then once you get back to your project path type:
 ```
 mv Elthon-0.0.1-Alpha Elthon_0_0_1_Alpha
