@@ -190,7 +190,7 @@ Heres a basic example:
 ```
 from Elthon.Elthon import files
 
-files.create("name", file="/path/to/directory/")
+files.create("name", path="/path/to/directory/")
 ```
 Output: N/A
 
