@@ -153,7 +153,7 @@ Input something: \
 {userInput} (after getting the input it returns it)
 
 
-## The files function (W.I.P.)
+## The files function
 ### files.read()
 files.read() reads and prints the content of the selected file.\
 Heres a basic example:
