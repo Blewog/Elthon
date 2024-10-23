@@ -35,7 +35,7 @@ import Elthon_0_0_1_Alpha
 ```
 or whatever the folder is named.
 
-# DOCUMENTATION (W.I.P. (Both this and the library))
+# DOCUMENTATION
 ## The write function
 ### write.console()
 write.console() is essentially just print. example: write.console("Hello World!") which would print "Hello, World!". Heres a breakdown of the function: its just print so the thing in quotations is what will be printed.\
