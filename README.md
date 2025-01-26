@@ -1,3 +1,4 @@
+# Development has been stoped   
 # INSTALLATION
 ### This was testing only in vscode in github codesplaces
 The installation is quite simple, and the normal installation used for other libraries should work but i cant test that since i only use github codespaces vscode.
